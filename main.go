@@ -81,7 +81,7 @@ func main() {
 	}
 	defer container.Close()
 
-	deviceStore, err := container.GetFirstDevice()
+	deviceStore, err := container.GetFirstDevice(context.Background())
 	if err != nil {
 		log.Fatalf("load WhatsApp device store: %v", err)
 	}
